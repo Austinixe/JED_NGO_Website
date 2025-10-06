@@ -12,45 +12,78 @@
 </head>
 <body>
 
-
-    
   <!-- Navigation -->
   <nav>
-    <ul>
-      <li><a href="#about">About</a></li>
-      <li><a href="#programs">Programs</a></li>
-      <li><a href="#projects">Projects</a></li>
-      <li><a href="#faq">FAQ</a></li>
-      <li><a href="#contact">Contact</a></li>
-    </ul>
-  </nav>
+  <ul>
+    <!-- About with dropdown -->
+    <li class="dropdown">
+      <a href="#about" class="dropbtn">About Us ▾</a>
+      <div class="dropdown-content">
+        <a href="#about">Overview</a>
+        <a href="#mission">Our Mission</a>
+        <a href="#vision">Our Vision</a>
+      </div>
+    </li>
 
- <!-- Hero Section -->
+    <li><a href="#programs">Programs</a></li>
+    <li><a href="#projects">Projects</a></li>
+    <li><a href="#faq">FAQ</a></li>
+    <li><a href="#contact">Contact</a></li>
+    <li><a href="#donate" class="btn donate-btn">Donate</a></li>
+  </ul>
+</nav>
+
+
+  
+
+  <!-- Hero Section -->
 <header class="hero">
   <div class="hero-content">
-    <h1>Empowering Lives, Eradicating Poverty</h1>
+    <h1><span id="typed"></span></h1>
     <p>Together we can build sustainable futures for communities in need.</p>
     <a href="#about" class="btn btn-outline">Learn More</a>
   </div>
 </header>
+    
+ <!-- About Section -->
+<section id="about" class="about-section">
+  <h2>About Us</h2>
+  <p class="about-intro">
+    The Edoro Judy Empowerment Foundation is dedicated to building opportunities 
+    and creating sustainable change through education, training, and community-driven projects.
+  </p>
 
-
-
-
-  <!-- About -->
-  <section id="about">
-    <h2>About Us</h2>
-    <p>
-      The Edoro Judy Poverty Eradication & Empowerment Foundation is committed to ending poverty 
-      and empowering individuals through sustainable programs, education, and community projects. 
-      Since our founding, we’ve impacted thousands of lives with skills, opportunities, and hope.
-    </p>
-    <div class="stats">
-      <div><h3>10+</h3><p>Years of Service</p></div>
-      <div><h3>5,000+</h3><p>Lives Empowered</p></div>
-      <div><h3>200+</h3><p>Communities Reached</p></div>
+  <div class="about-cards">
+    <!-- Vision -->
+    <div class="about-card" id="vision">
+      <h3>Our Vision</h3>
+      <p>
+        To create a society where every individual has the opportunity to thrive—
+        free from barriers of inequality, and supported by strong, inclusive communities.
+      </p>
     </div>
-  </section>
+
+    <!-- Mission -->
+    <div class="about-card" id="mission">
+      <h3>Our Mission</h3>
+      <p>
+        To empower individuals and communities by providing access to education, 
+        skills development, and sustainable opportunities that break cycles of hardship 
+        and foster dignity and independence.
+      </p>
+    </div>
+
+    <!-- Promise -->
+    <div class="about-card" id="promise">
+      <h3>Our Promise</h3>
+      <p>
+        Learn. Grow. Transform.  
+        We are committed to turning opportunities into lasting impact through 
+        mentorship, innovation, and community-driven initiatives.
+      </p>
+    </div>
+  </div>
+</section>
 
   <!-- Programs -->
   <section id="programs">
@@ -84,31 +117,27 @@
     <h2>Our Projects</h2>
     <div class="project-grid">
       <div class="project-card">
-        <img src="images/women-training.jpg" alt="Women Empowerment">
-        <h3>Women Empowerment</h3>
-        <p>Over 200 women trained in small business management and financial literacy.</p>
+        <img src="images/intervention.jpeg" alt="Women Empowerment">
+        <h3>Educational Support</h3>
+        <p><div class="project-card">
+  <img src="images/pve2.jpg" alt="Educational Support">
+  <h3>Educational Support</h3>
+  <p>Distributed learning materials to pupils across Esan West to promote quality education and equal opportunities.</p>
+</div>
+</p>
       </div>
       <div class="project-card">
-        <img src="images/youth-skills.jpg" alt="Youth Skills">
+        <img src="images/inter3.jpg" alt="Youth Skills">
         <h3>Youth Skills Development</h3>
         <p>Youth equipped with digital skills, entrepreneurship, and mentorship programs.</p>
       </div>
       <div class="project-card">
-        <img src="images/community-water.jpg" alt="Community Water Project">
+        <img src="images/pve3.jpg" alt="Community Water Project">
         <h3>Community Water Project</h3>
         <p>Providing clean water to rural communities, reducing disease rates by 60%.</p>
       </div>
     </div>
   </section>
-
-<!-- Donate Section -->
-<section id="donate">
-  <h2>Support Our Mission</h2>
-  <p>Your contributions help us empower lives and eradicate poverty. Every donation counts!</p>
-  
-  <a href="mailto:info@edorojudyfoundation.org" class="btn">Donate via Email</a>
-  <a href="tel:+2348012345678" class="btn">Call to Donate</a>
-</section>
 
   <!-- FAQ -->
   <section id="faq">
@@ -147,15 +176,70 @@
 
   <!-- Footer -->
   <footer>
-    <p>&copy; 2025 Edoro Judy Foundation. All rights reserved.</p>
-    <div class="social-icons">
-      <a href="#"><i class="fab fa-facebook"></i></a>
-      <a href="#"><i class="fab fa-twitter"></i></a>
-      <a href="#"><i class="fab fa-linkedin"></i></a>
-      <a href="mailto:info@edorojudyfoundation.org"><i class="fas fa-envelope"></i></a>
-    </div>
-  </footer>
+ 
+<section class="donate-section" id="donate">
+  <h2>Support Our Mission</h2>
+  <p>Your donation helps us make a bigger impact. Choose a method below:</p>
 
-  <script src="script.js"></script>
+
+
+  <div class="donation-container">
+    <!-- Online Donation Option -->
+    <div class="donation-option">
+      <h3>Donate Online (Card, Transfer, USSD)</h3>
+
+      <!-- Trigger Button (always visible) -->
+      <button type="button" id="showDonateForm" class="btn-outline">Donate Online</button>
+
+      <!-- Hidden Form (appears only when clicked) -->
+      <div id="donationForm" class="donation-form">
+        <input type="number" id="donationAmount" placeholder="Enter amount (₦)" />
+        <input type="email" id="donorEmail" placeholder="Enter your email" />
+        <button type="button" id="paystackBtn" class="btn-outline">Proceed to Payment</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+
+
+
+
+
+<!-- Paystack Library + Script -->
+<script src="https://js.paystack.co/v1/inline.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+<script src="script.js"></script>
+
+<script src="script.js"></script>
+</section>
+
+
+ 
+
+ <!-- Footer bottom -->
+  <div class="footer-bottom">
+    <div class="social-links">
+      <a href="https://facebook.com" target="_blank"><i class="fab fa-facebook-f"></i></a>
+      <a href="https://twitter.com" target="_blank"><i class="fab fa-x-twitter"></i></a>
+      <a href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+      <a href="https://linkedin.com" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+    </div>
+    <p>&copy; 2025 Edoro Judy Foundation. All Rights Reserved.</p>
+  </div>
+</footer>
+
+
+
+
+
+
+</footer>
+
+  
 </body>
 </html>
+
+
