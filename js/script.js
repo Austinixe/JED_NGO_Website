@@ -1,3 +1,14 @@
+
+
+
+const hamburger = document.getElementById('hamburger');
+const navLinks = document.getElementById('navLinks');
+
+hamburger.addEventListener('click', () => {
+  navLinks.style.display = (navLinks.style.display === 'flex') ? 'none' : 'flex';
+});
+
+
 // ==================== FAQ Toggle ====================
 document.querySelectorAll('.faq-item').forEach(item => {
   item.addEventListener('click', () => {
